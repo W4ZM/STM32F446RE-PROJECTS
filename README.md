@@ -1,5 +1,5 @@
 # STM32F446RE-PROJECTS
-bunch of stm32f4 dev board projects without using the CubeIDE ..  
+A bunch of stm32f4 dev board projects without using the CubeIDE, the first project will be blinking LED, more coming soon ... 
 
 ## Requirements  
 - Linux OS
