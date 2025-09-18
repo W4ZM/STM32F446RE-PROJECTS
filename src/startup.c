@@ -237,14 +237,17 @@ void reset_handler(void){
     uint8_t* flash_data = (uint8_t*)&_etext;
     uint8_t* sram_data = (uint8_t*)&_sdata;
 
+    // copy .data section from FLASH to SRAM
     for (uint32_t i = 0; i < data_size; i++)
         sram_data[i] = flash_data[i];
     
     uint32_t bss_size = (uint32_t)&_ebss - (uint32_t)&_sbss;
     uint8_t* bss = (uint8_t*)&_sbss;
 
+    // fill .bss section with zeros in SRAM
     for (uint32_t i = 0; i < bss_size; i++)
         bss[i] = 0;
     
+    // call our main program
     main();
 }
