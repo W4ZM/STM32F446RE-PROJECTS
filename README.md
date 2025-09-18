@@ -1,9 +1,13 @@
 # STM32F446RE-PROJECTS
 bunch of stm32f4 dev board projects without using the CubeIDE ..  
-___  
+
+## Requirements  
+- Linux OS
+- [openocd](https://github.com/openocd-org/openocd)
+- Cmake
+- [Arm GNU Toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)
 
 ## How to build  
-(im using linux)
 ```bash
 git clone https://github.com/W4ZM/STM32F446RE-PROJECTS.git
 cd STM32F446RE-PROJECTS
@@ -12,7 +16,6 @@ cmake ..
 make
 ```
 ## Flash the firmware  
-(using [openocd](https://github.com/openocd-org/openocd))
 ```bash
 make flash
 ```
