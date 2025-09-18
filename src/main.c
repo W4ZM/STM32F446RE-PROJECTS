@@ -13,10 +13,10 @@ void main(void){
   dummy = RCC->AHB1ENR;
 
   GPIOA->MODER |= (1 << GPIO_MODER_MODER5_Pos);
-
+  
   while(1)
   {
-      GPIOA->ODR ^= (1 << LED_PIN);
+    GPIOA->ODR ^= (1 << LED_PIN);    
     for (uint32_t i = 0; i < 1000000; i++);
   }
 }

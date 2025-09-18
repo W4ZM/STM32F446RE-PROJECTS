@@ -10,7 +10,7 @@ SECTIONS
 {
 	.isr_vector :
 	{
-		KEEP(*(.isr_vector))
+		KEEP(*(.isr_vector)) /* do not let gc remove the section */
 	} >FLASH
 
 	.text :
