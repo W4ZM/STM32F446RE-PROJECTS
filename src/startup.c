@@ -228,7 +228,7 @@ uint32_t isr_vector[ISR_VECTOR_SIZE_WORDS] __attribute__((section(".isr_vector")
 };
 
 void default_handler(void){
-    while(1);
+    while(1); 
 }
 
 void reset_handler(void){
